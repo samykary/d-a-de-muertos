@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calaverita Literaria de Samy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #1a0933 0%, #3b1464 50%, #1a0933 100%);
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+            overflow-x: hidden;
+        }
+        .petalos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(6px 4px at 15% 20%, #ff9e00 60%, transparent 60%),
+                radial-gradient(7px 5px at 70% 10%, #ff6d00 60%, transparent 60%),
+                radial-gradient(5px 4px at 40% 75%, #ffbe0b 60%, transparent 60%),
+                radial-gradient(6px 5px at 85% 55%, #ff8500 60%, transparent 60%);
+            background-size: 240px 240px;
+            animation: caerPetalos 8s linear infinite;
+        }
+        @keyframes caerPetalos {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 240px; }
+        }
+        .ofrenda {
+            position: relative;
+            z-index: 1;
+            background-color: #fffaf0;
+            max-width: 720px;
+            width: 100%;
+            padding: 40px 35px;
+            border-radius: 22px;
+            border: 5px solid #ff6d00;
+            outline: 6px solid #e01e5a;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+            text-align: center;
+            color: #241038;
+        }
+        .papel-picado {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .etiqueta {
+            display: inline-block;
+            background-color: #e01e5a;
+            color: #ffffff;
+            font-size: 0.85em;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            font-weight: bold;
+        }
+        h1 {
+            color: #5a189a;
+            font-size: 2.2em;
+            margin-bottom: 22px;
+            text-shadow: 1px 1px 0px #ff9e00;
+        }
+        .contenido-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .poema-caja {
+            flex: 1 1 320px;
+            background-color: #ffffff;
+            padding: 25px 22px;
+            border-radius: 16px;
+            border: 2px dashed #ff6d00;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(90, 24, 154, 0.08);
+        }
+        .estrofa {
+            font-size: 1.08em;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: #2b193d;
+            font-style: italic;
+        }
+        .estrofa:last-child {
+            margin-bottom: 0;
+        }
+        .animacion-caja {
+            flex: 0 1 250px;
+            background-color: #140824;
+            padding: 12px;
+            border-radius: 18px;
+            border: 3px solid #5a189a;
+            box-shadow: 5px 5px 0px #ff6d00;
+        }
+        .animacion-caja img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+        .pie-animacion {
+            margin-top: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #ff9e00;
+        }
+        .firma {
+            padding-top: 15px;
+            border-top: 2px solid #f0e1c6;
+            font-size: 1.1em;
+            color: #5a189a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="petalos"></div>
+
+    <div class="ofrenda">
+        <div class="papel-picado">🏵️ 💀 🕯️ 💀 🏵️</div>
+        <div class="etiqueta">Día de Muertos • Arte e IA</div>
+        
+        <h1>Calaverita para Samy</h1>
+
+        <div class="contenido-grid">
+            <!-- Calaverita Literaria -->
+            <div class="poema-caja">
+                <p class="estrofa">
+                    Estaba Samy muy concentrada,<br>
+                    escribiendo código en su pantalla,<br>
+                    creando páginas bien diseñadas<br>
+                    sin que se viera ni una sola falla.
+                </p>
+                <p class="estrofa">
+                    Llegó la Flaca muy decidida:<br>
+                    «¡Vámonos, Samy, al más allá!»<br>
+                    Pero al ver su página tan lucida,<br>
+                    se puso a bailar con la IA.
+                </p>
+                <p class="estrofa">
+                    «Mejor me quedo en tu computadora,<br>
+                    viendo cómo haces magia en HTML,<br>
+                    te llevo luego, no será ahora,<br>
+                    ¡que esta calaca ya tiene su reel!»
+                </p>
+            </div>
+
+            <!-- GIF de la calavera -->
+            <div class="animacion-caja">
+                <img src="gif.gif" alt="Calaca animada">
+                <div class="pie-animacion">💀 ¡Mi calaca cobrando vida! 💀</div>
+            </div>
+        </div>
+
+        <div class="firma">
+            Escrito e ilustrado por Samy • 2026
+        </div>
+    </div>
+
+</body>
+</html>
